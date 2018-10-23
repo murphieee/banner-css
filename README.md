@@ -1,8 +1,8 @@
 # banner-css
-##简介
+## 简介
 仅使用CSS完成banner点击切换图片
-##知识点
-1. input(checkbox) 与 label的共用，实现图片切换与点击区域的绑定. 
+## 知识点
+1. input(checkbox) 与 label的共用，实现图片切换与点击区域的绑定. <br>
 **注意：input在html的位置，方便~选择器选择图片。**
 2. 定位：position：absolute; 脱离文档流，需要父级relative;
 3. rgba 与 opcity的区别： opacity会使所有子元素透明。
