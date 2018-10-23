@@ -1,0 +1,87 @@
+body, ul, li, p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.wrapper{
+    width: 948px;
+    height: 260px;
+    margin: 0 auto;
+    border: 3px solid #000;
+    /* 为list提供参考 */
+    position: relative;
+}
+.list{
+    /* 脱离文档流，需要父级relative */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    /* 不要用opacity，opacity会把子元素也变透明 */
+
+}
+.list label{
+    display: block;
+    width: 230px;
+    height:65px;
+    padding-left: 15px;
+}
+.list .list-img{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    /* 回到同一行 */
+    display: inline-block;
+    /* 居中 */
+    margin-top: 12px;
+}
+.list-img img{
+    width: 100%;
+}
+.list .list-des{
+    /* 回到同一行 */
+    display: inline-block;
+    /* 对齐方式：顶端对齐 */
+    vertical-align:top;
+    margin-top: 12px;
+}
+.list-des p{
+    color: #fff;
+}
+
+.list-des .des{
+    font-size: 12px;
+}
+
+.img-box img{
+    display: none;
+}
+/*注意 ~选择器，和nth-child选择器 */
+#btn1:checked ~.img-box img:nth-child(1){
+    display: block;
+}
+#btn2:checked ~.img-box img:nth-child(2){
+    display: block;
+}
+#btn3:checked ~.img-box img:nth-child(3){
+    display: block;
+}
+#btn4:checked ~.img-box img:nth-child(4){
+    display: block;
+}
+input{
+    display: none;
+}
+/* 找到checked元素对应的label设置背景渐变 */
+#btn1:checked ~.list label:nth-child(1){
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+#btn2:checked ~.list label:nth-child(2){
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+#btn3:checked ~.list label:nth-child(3){
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
+#btn4:checked ~.list label:nth-child(4){
+    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+}
